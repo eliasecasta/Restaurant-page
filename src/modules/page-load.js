@@ -23,11 +23,36 @@ function createNav(id) {
   return navbar
 }
 
+function createSection(id) {
+  const section = document.createElement('section')
+  section.setAttribute('id', id)
+  
+  return section
+}
+
+function createFooter(id, text) {
+  const footer = document.createElement('footer')
+  footer.setAttribute('id', id)
+  
+  const footerText = document.createElement('h2')
+  footerText.textContent = text
+
+  footer.appendChild(footerText)
+
+  return footer
+
+}
+
 function pageLoad() {
   const content = document.getElementById('content')
 
   const navbar = createNav('nav')
   content.appendChild(navbar)
+
+  const section = createSection('section-content')
+  content.appendChild(section)
+
+
 
 }
 
