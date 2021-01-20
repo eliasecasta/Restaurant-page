@@ -1,0 +1,1 @@
+(()=>{"use strict";!function(){const e=document.getElementById("content"),n=newHeader("header","Paradise food");e.appendChild(n)}()})();
