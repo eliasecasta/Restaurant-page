@@ -34,9 +34,8 @@ function createFooter(id, text) {
   const footer = document.createElement('footer')
   footer.setAttribute('id', id)
   
-  const footerText = document.createElement('h2')
+  const footerText = document.createElement('p')
   footerText.textContent = text
-
   footer.appendChild(footerText)
 
   return footer
@@ -52,7 +51,8 @@ function pageLoad() {
   const section = createSection('section-content')
   content.appendChild(section)
 
-
+  const footer = createFooter('footer', 'Created by Elias Castañeda - 2021')
+  content.appendChild(footer)
 
 }
 
