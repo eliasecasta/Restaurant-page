@@ -1,7 +1,7 @@
 function navElements(id, content) {
-  const navElement = document.createElement("a")
+  const navElement = document.createElement("button")
   navElement.setAttribute("id", id)
-  navElement.setAttribute("href", "#")
+  navElement.setAttribute("type", "button")
   navElement.classList.add("navElement")
   navElement.textContent = content
   return navElement
