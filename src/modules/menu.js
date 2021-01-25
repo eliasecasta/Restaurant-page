@@ -1,24 +1,31 @@
 function createTitle() {
   const article = document.createElement("article")
-  article.classList.add("menu-article")
+  article.classList.add("article")
 
   const header = document.createElement("header")
-  header.classList.add("menu-header")
+  header.classList.add("article-header")
   header.textContent = "Our main dishes"
   article.appendChild(header)
 
   return article
 }
 
+function createPhotoWrapper() {
+  const wrapper = document.createElement("div")
+  wrapper.classList.add("album-wrapper")
+
+  return wrapper
+}
+
 function createPhoto(image) {
-  const album = document.createElement("div")
-  album.classList.add("menu-photo")
+  // const album = document.createElement("div")
+  // album.classList.add("menu-photo")
 
   const img = document.createElement("img")
   img.setAttribute("src", image)
-  album.appendChild(img)
+  // album.appendChild(img)
 
-  return album
+  return img
 }
 
 function menuLoad() {
@@ -27,6 +34,9 @@ function menuLoad() {
 
   const title = createTitle()
   content.appendChild(title)
+
+  const wrapper = createPhotoWrapper()
+  content.appendChild(wrapper)
 
   const photo1 = createPhoto(
     "https://cdn.pixabay.com/photo/2010/12/13/10/05/berries-2277_1280.jpg"
@@ -49,12 +59,12 @@ function menuLoad() {
     "https://cdn.pixabay.com/photo/2014/10/19/20/59/hamburger-494706_1280.jpg"
   )
 
-  content.appendChild(photo1)
-  content.appendChild(photo2)
-  content.appendChild(photo3)
-  content.appendChild(photo4)
-  content.appendChild(photo5)
-  content.appendChild(photo6)
+  wrapper.appendChild(photo1)
+  wrapper.appendChild(photo2)
+  wrapper.appendChild(photo3)
+  wrapper.appendChild(photo4)
+  wrapper.appendChild(photo5)
+  wrapper.appendChild(photo6)
 }
 
 export default menuLoad
