@@ -1,7 +1,12 @@
+const addClassToBody = () => {
+  var body = document.body
+  body.classList.add("bg")
+}
+
 const navElements = (id, content) => {
-  const navElement = document.createElement("button")
+  const navElement = document.createElement("a")
+  navElement.setAttribute("href", "#")
   navElement.setAttribute("id", id)
-  navElement.setAttribute("type", "button")
   navElement.classList.add("navElement")
   navElement.textContent = content
 
@@ -12,7 +17,7 @@ const createNav = (id) => {
   const navbar = document.createElement("nav")
   navbar.setAttribute("id", id)
 
-  const pageName = navElements("home", "Le Buffet")
+  const pageName = navElements("home", "Home")
   const menu = navElements("menu", "Menu")
   const contact = navElements("contact", "Contact")
 
@@ -42,6 +47,8 @@ const createFooter = (id, content) => {
 }
 
 const pageLoad = () => {
+  addClassToBody()
+
   const content = document.getElementById("content")
 
   const navbar = createNav("nav")

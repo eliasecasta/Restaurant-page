@@ -1,0 +1,37 @@
+* {
+  color: white;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+.bg {
+  background-image: url(/src/images/restaurant.jpg);
+}
+
+#nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+.navElement {
+  color: white;
+  text-decoration: none;
+  font-size: xx-large;
+}
+
+.navElement:visited {
+  text-decoration: none;
+  text-decoration-color: black;
+}
+
+.navElement:hover {
+  text-decoration: underline;
+  text-decoration-color: white;
+}
+
+.article-header {
+  font-size: xx-large;
+}
