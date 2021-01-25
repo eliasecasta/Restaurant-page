@@ -2,6 +2,8 @@ import pageLoad from "./modules/page-load"
 import homeLoad from "./modules/home"
 import contactLoad from "./modules/contact"
 import menuLoad from "./modules/menu"
+import "./styles/reset.css"
+import "./styles/style.css"
 
 // TODO: Change all functions to arrow functions
 
