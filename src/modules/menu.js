@@ -1,4 +1,4 @@
-function createTitle() {
+const createTitle = () => {
   const article = document.createElement("article")
   article.classList.add("article")
 
@@ -10,14 +10,14 @@ function createTitle() {
   return article
 }
 
-function createPhotoWrapper() {
+const createPhotoWrapper = () => {
   const wrapper = document.createElement("div")
   wrapper.classList.add("album-wrapper")
 
   return wrapper
 }
 
-function createPhoto(image) {
+const createPhoto = (image) => {
   // const album = document.createElement("div")
   // album.classList.add("menu-photo")
 
@@ -28,7 +28,7 @@ function createPhoto(image) {
   return img
 }
 
-function menuLoad() {
+const menuLoad = () => {
   const content = document.getElementById("section-content")
   content.textContent = ""
 

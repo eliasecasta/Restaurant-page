@@ -80,13 +80,21 @@ html {
   border: 1px solid white;
 }
 
+iframe {
+  position: absolute;
+  left: 50%;
+  bottom: 3em;
+  transform: translate(-50%);
+  /* margin-top: -50px; */
+}
+
 #footer {
   position: fixed;
   /* display: flex; */
   /* margin: 0 auto; */
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: 1%;
 }
 
 #footer p {
