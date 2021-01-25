@@ -18,12 +18,8 @@ const createPhotoWrapper = () => {
 }
 
 const createPhoto = (image) => {
-  // const album = document.createElement("div")
-  // album.classList.add("menu-photo")
-
   const img = document.createElement("img")
   img.setAttribute("src", image)
-  // album.appendChild(img)
 
   return img
 }

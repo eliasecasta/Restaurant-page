@@ -5,8 +5,6 @@ import menuLoad from "./modules/menu"
 import "./styles/reset.css"
 import "./styles/style.css"
 
-// TODO: Change all functions to arrow functions
-
 pageLoad()
 homeLoad()
 
