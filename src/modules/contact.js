@@ -1,4 +1,4 @@
-function createArticle(title, info) {
+function createArticle(title, info = "", map = "") {
   const article = document.createElement("article")
   article.classList.add("article")
 
@@ -12,11 +12,10 @@ function createArticle(title, info) {
   artInfo.textContent = info
   article.appendChild(artInfo)
 
-  return article
-}
+  const mapLoc = map
+  article.innerHTML += mapLoc
 
-function createMap() {
-  return '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.690203900894!2d-106.10465088521616!3d28.668993282403473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86ea430686da6d7b%3A0xdf523b1b330e2d4f!2sPrivada%20de%20Francisco%20Pimentel%205302-5390%2C%20Las%20Granjas%2C%2031100%20Chihuahua%2C%20Chih.!5e0!3m2!1sen!2smx!4v1611247576290!5m2!1sen!2smx" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>'
+  return article
 }
 
 function contactLoad() {
@@ -26,7 +25,13 @@ function contactLoad() {
   const phone = createArticle("Phone Number", "625-123-6547")
   content.appendChild(phone)
 
-  content.innerHTML += createMap()
+  const map = createArticle(
+    "Location",
+    "",
+    '<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-156.66503906250003%2C18.869904894964883%2C-154.94018554687503%2C20.287961155077717&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=9/19.5805/-155.8026">View Larger Map</a></small>'
+  )
+
+  content.appendChild(map)
 }
 
 export default contactLoad
