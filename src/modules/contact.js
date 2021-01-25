@@ -1,4 +1,4 @@
-function createArticle(title, info = "", map = "") {
+const createArticle = (title, info = "", map = "") => {
   const article = document.createElement("article")
   article.classList.add("article")
 
@@ -18,7 +18,7 @@ function createArticle(title, info = "", map = "") {
   return article
 }
 
-function contactLoad() {
+const contactLoad = () => {
   const content = document.getElementById("section-content")
   content.textContent = ""
 
@@ -28,7 +28,7 @@ function contactLoad() {
   const map = createArticle(
     "Location",
     "",
-    '<iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-156.66503906250003%2C18.869904894964883%2C-154.94018554687503%2C20.287961155077717&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=9/19.5805/-155.8026">View Larger Map</a></small>'
+    '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4845118.1716643255!2d23.49195426169363!3d53.63305659478495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46da2584e2ad4881%3A0xa1d181ec8c10!2sBelarus!5e0!3m2!1sen!2smx!4v1611564201582!5m2!1sen!2smx" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>'
   )
 
   content.appendChild(map)

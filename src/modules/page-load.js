@@ -1,13 +1,14 @@
-function navElements(id, content) {
+const navElements = (id, content) => {
   const navElement = document.createElement("button")
   navElement.setAttribute("id", id)
   navElement.setAttribute("type", "button")
   navElement.classList.add("navElement")
   navElement.textContent = content
+
   return navElement
 }
 
-function createNav(id) {
+const createNav = (id) => {
   const navbar = document.createElement("nav")
   navbar.setAttribute("id", id)
 
@@ -22,14 +23,14 @@ function createNav(id) {
   return navbar
 }
 
-function createSection(id) {
+const createSection = (id) => {
   const section = document.createElement("section")
   section.setAttribute("id", id)
 
   return section
 }
 
-function createFooter(id, content) {
+const createFooter = (id, content) => {
   const footer = document.createElement("footer")
   footer.setAttribute("id", id)
 
@@ -40,7 +41,7 @@ function createFooter(id, content) {
   return footer
 }
 
-function pageLoad() {
+const pageLoad = () => {
   const content = document.getElementById("content")
 
   const navbar = createNav("nav")
